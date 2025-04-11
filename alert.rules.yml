@@ -1,0 +1,11 @@
+
+groups:
+- name: pod-monitoring
+  rules:
+  - alert: PodRestartingTooOften
+    expr: rate(kube_pod_container_status_restarts_total[5m]) > 0.5
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      description: "Pod {{ $labels.pod }} is restarting frequently"
