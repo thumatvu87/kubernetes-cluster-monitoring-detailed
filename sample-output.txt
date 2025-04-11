@@ -1,0 +1,6 @@
+
+# Monitoring Output Samples
+
+- Prometheus targets loaded: node-exporter, kubelet, pods
+- Alertmanager firing alerts: PodRestartingTooOften
+- Grafana dashboard showing pod CPU & memory usage
